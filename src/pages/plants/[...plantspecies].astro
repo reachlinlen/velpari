@@ -1,0 +1,16 @@
+---
+import Layout from "@/layouts/Layout.astro";
+export function getStaticPaths() {
+  return [
+    {params: {plantspecies: 'fistula'}},
+    {params: {plantspecies: 'cumini'}},
+    {params: {plantspecies: 'santalinus'}},
+  ];
+}
+
+const { plantspecies } = Astro.params;
+---
+
+<Layout title={plantspecies}>
+
+</Layout>

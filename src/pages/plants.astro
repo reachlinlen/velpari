@@ -1,0 +1,16 @@
+---
+import NavBar from "@/components/NavBar";
+import Categories from "@/components/Categories";
+import Layout from "@/layouts/Layout.astro";
+import '@/styles/globals.css'
+
+---
+
+<Layout title="plants">
+  <NavBar />
+  <header class="mx-auto text-center mt-12 underline text-emerald-950 font-bold">Plants</header>
+  <main class="max-w-[944px] mx-auto">
+    <Categories />
+  </main>
+
+</Layout>
