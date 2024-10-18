@@ -1,11 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { SOUTH_INDIA_TREES } from "@/lib/constants";
 export function getStaticPaths() {
-  return [
-    {params: {plantspecies: 'fistula'}},
-    {params: {plantspecies: 'cumini'}},
-    {params: {plantspecies: 'santalinus'}},
-  ];
+  return SOUTH_INDIA_TREES.map((tree) => {
+    return ({params: {plantspecies: tree.id}})
+  })
 }
 
 const { plantspecies } = Astro.params;

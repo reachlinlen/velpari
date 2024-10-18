@@ -8,9 +8,13 @@ export interface PlantCategories {
   //   height: number,
   //   format: string,
   // },
-  key: React.Key
+  key?: React.Key
 }
 
 export interface PlantSpecies extends PlantCategories {
-  tamil_name: string
+  tamil_name: string,
+  negative?: string,
+  keywords: string[],
+  href: string,
+  id: string
 }
