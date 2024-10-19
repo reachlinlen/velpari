@@ -19,11 +19,11 @@ export default function Categories() {
             of Septemeber, which is usually a breeze time in our region. Native trees holds the key to
             combat Climate change. Since most of the native trees are drought resistant and has tap root system,
             can withstand heavy winds due to cyclone. Moreover, these trees act as fodder and home to many 
-            birds / mammals, the biodiversity improves very drastically ultimately aiding the human beings.
+            birds / mammals, as a result the biodiversity improves very drastically ultimately aiding the human beings.
             </p>
           </div>
 
-          <div className="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 grid gap-y-4">
+          {/* <div className="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 grid gap-y-4">
             {PLANT_CATEGORIES.map((feature: PlantCategories) => (
               <a href={`/plants/species?type=${feature.key}`} key={feature.key}>
                 <button type="button"
@@ -44,7 +44,31 @@ export default function Categories() {
                 </button>
               </a>
             ))}
-          </div>
+          </div> */}
+          <div className="mt-16 space-y-16">
+          {PLANT_CATEGORIES.map((feature: PlantCategories, featureIdx) => (
+            <a href={`/plants/species?type=${feature.key}`} key={feature.key}>
+              <button type="button">
+                <div
+                  key={feature.key}
+                  className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+                >
+                  <div className={`mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4 ${featureIdx % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-8 xl:col-start-9'}`}>
+                    <h3 className="text-lg font-medium text-gray-900">{feature.name}</h3>
+                    <p className="mt-2 text-sm text-gray-500">{feature.description}</p>
+                  </div>
+                  <div className={`flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8 
+                                    ${featureIdx % 2 === 0 ? 'lg:col-start-6 xl:col-start-5' : 'lg:col-start-1'}`}
+                  >
+                    <div className="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg bg-gray-100">
+                      {feature.image}
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </a>
+          ))}
+        </div>
         </div>
       </div>
     </div>
