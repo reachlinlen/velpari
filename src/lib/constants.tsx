@@ -331,7 +331,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'konghilavam',
     name: 'Cochlospermum religiosum',
     tamil_name: 'கொங்கிலவம்',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="konghilavam" src="/images/konghilavam-flower.jpg" className="img-zoom" />,
     description: `A medium sized deciduous tree with bright yellow colour flowers. The
     fibre is used for pillow / mattresses`,
     keywords: ['medium', 'deciduous'],
