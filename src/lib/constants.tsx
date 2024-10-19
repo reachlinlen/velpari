@@ -206,16 +206,16 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'aavarai',
     name: 'Senna auriculata',
     tamil_name: 'ஆவாரை',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="aavarai" src="/images/aavarai-full.jpeg" className="img-zoom" />,
     description: `A drought tolerant shrub that also attracts butterflies`,
-    keywords: ['shrub', 'attract'],
+    keywords: ['shrub', 'attract','flower'],
     href: '/aavarai'
   },
   {
     id: 'veerai',
     name: 'Drypetes sepiaria',
     tamil_name: 'வீரை',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="veerai" src="/images/veerai-fruits.jpeg" className="img-zoom" />,
     description: `A medium sized evergreen tree. Tree is drough tolerant, has evergreen foliage
     and is slow growing.`,
     keywords: ['medium', 'evergreen', 'drought', 'slow'],
@@ -225,7 +225,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'konjhi',
     name: 'Glycosmis mauritiana',
     tamil_name: 'கொஞ்சி',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="konjhi" src="/images/konjhi-fruits.jpg" className="img-zoom" />,
     description: `An evergreen shrub. Also drought tolerant, 
     has beautiful foliage and fast growing.`,
     keywords: ['shrub', 'drought', 'evergreen', 'fast'],
@@ -235,7 +235,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'vaagai',
     name: 'Albizia lebbeck',
     tamil_name: 'வாகை',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="vaagai" src="/images/vaagai-full.jpg" className="img-zoom" />,
     description: `A large deciduous tree with beautiful flowers. Also a fast growing tree
     suitable for creating an early canopy`,
     keywords: ['deciduous', 'fast'],
@@ -245,7 +245,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'neermaruthu',
     name: 'Terminalia arjuna',
     tamil_name: 'நீர் மருது',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="neermaruthu" src="/images/neermaruthu-full.jpeg" className="img-zoom" />,
     description: `A large, spreading deciduous tree with beautiful bark. Drought tolerant tree
     generally found along river banks.`,
     keywords: ['deciduous', 'slow', 'drought'],
@@ -253,9 +253,9 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
   },
   {
     id: 'eeti',
-    name: 'Dalbergia larifilolia',
+    name: 'Dalbergia latifolia',
     tamil_name: 'ஈட்டி',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="eeti" src="/images/eeti-full.jpg" className="img-zoom" />,
     description: `A tall deciduous tree generally found on hillocks. Wood is used for
     furniture making. ALbeit a slow growing, drought tolerant tree.`,
     keywords: ['timber', 'tall', 'deciduous', 'slow', 'drought'],
@@ -265,26 +265,26 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'karumaruthu',
     name: 'Terminalia crenulata',
     tamil_name: 'கரு மருது',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="karumaruthu" src="/images/karumaruthu-full.jpg" className="img-zoom" />,
     description: `A large deciduous tree. Bark is blackish-grey, fissured like a 
     crocodile back. Fruit is a winged capsule, reddish when mature.`,
     keywords: ['timber'],
     href: '/karumaruthu'
   },
   {
-    id: 'punnai',
+    id: 'pinnai',
     name: 'Calophyllum iuophyllu',
-    tamil_name: 'புண்னை',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    tamil_name: 'பிண்னை',
+    image: <img alt="pinnai" src="/images/pinnai-full.jpg" className="img-zoom" />,
     description: `A large evergreen tree with decorative leaves, fragrant flowers and spreading crown`,
     keywords: ['timber', 'garden', 'attract', 'evergreen'],
-    href: '/punnai'
+    href: '/pinnai'
   },
   {
     id: 'kaatuezhumichai',
     name: 'Atalantia monophylla',
     tamil_name: 'காட்டு எலுமிச்சை',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="kaatuezhumichai" src="/images/kaatuezhumichai.jpeg" className="img-zoom" />,
     description: `A medium sized evergreen tree with fruits being used for pickles`,
     keywords: ['medium', 'evergreen', 'drought', 'slow'],
     href: '/kaatuezhumichai'
@@ -293,7 +293,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'kaatuiluppai',
     name: 'Madhuca longifolia',
     tamil_name: 'காட்டு இலுப்பை',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="kaatuiluppai" src="/images/kaatuiluppai-full.jpg" className="img-zoom" />,
     description: `A large spreading evergreen tree with edible fruits and flowers. This tree
     is a beautiful, slow-growing tree.`,
     keywords: ['tall', 'evergreen', 'slow'],
@@ -303,17 +303,17 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     id: 'maghilam',
     name: 'Mimusops elengi',
     tamil_name: 'மகிழம்',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
-    description: `A medium sized tree with evergreen foliage. It is also drought resistant 
-    and slow-growing `,
-    keywords: ['medium', 'evergreen', 'slow', 'drought'],
+    image: <img alt="maghilam" src="/images/maghilam-full.jpg" className="img-zoom" />,
+    description: `A medium sized tree with evergreen foliage with fragrant flowers. 
+    Its timber is valuable, the fruit is edible & also drought resistant. `,
+    keywords: ['medium', 'evergreen', 'slow', 'drought', 'garden'],
     href: '/maghilam'
   },
   {
     id: 'kuttipazha',
     name: 'Streblus asper',
     tamil_name: 'பிராய், குட்டிபலா',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="kuttipazha" src="/images/kuttipazha.jpg" className="img-zoom" />,
     description: `A medium sized tree with evergreen foliage. It is also drought resistant 
     and slow-growing`,
     keywords: ['medium', 'evergreen', 'slow', 'drought'],
