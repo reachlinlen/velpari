@@ -30,7 +30,7 @@ export const PLANT_CATEGORIES: PlantCategories[] = [
   },
   {
     name: 'Flowering Trees - பூ மரங்கள்',
-    image: <img alt="fruit trees" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="flower-trees" src="/images/kaasan-flower.jpg" className="img-zoom" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
     key: 'flower'
