@@ -45,7 +45,7 @@ export default function Categories() {
               </a>
             ))}
           </div> */}
-          <div className="mt-16 space-y-16">
+          <div className="mt-16">
           {PLANT_CATEGORIES.map((feature: PlantCategories, featureIdx) => (
             <a href={`/plants/species?type=${feature.key}`} key={feature.key}>
               <button type="button">
