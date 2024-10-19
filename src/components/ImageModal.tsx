@@ -8,29 +8,39 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 import React from "react";
+import type { PlantSpecies } from "@/lib/types";
 
 export function ImageModal({
-  title,
-  src,
-  altText,
+  plant,
 }: {
-  title: string;
-  src: string;
-  altText: string;
+  plant: PlantSpecies;
 }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button>
-          <img className="aspect-[1/0.8] img_zoom" alt={altText} src={src} />
-        </button>
+        <div key={plant.id} className="group">
+          <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
+            {plant.image}
+            {/* <img
+              alt={product.imageAlt}
+              src={product.imageSrc}
+              className="h-full w-full object-cover object-center group-hover:opacity-75"
+            /> */}
+          </div>
+          <div className="mt-4 flex items-start justify-between text-base font-medium text-gray-900 h-10">
+            <h3>{plant.name} - {plant.tamil_name}</h3>
+          </div>
+          <p className="mt-1 text-sm italic text-gray-500 h-20 max-h-20 overflow-y-scroll">{plant.description}</p>
+          <div className='flex justify-center'>
+            <Button variant="ghost" className=''>Add to cart</Button>
+          </div>
+        </div>
       </DialogTrigger>
-      <p className="mt-3 text-center">{title}</p>
       <DialogContent className="bg-white max-w-[720px] w-vw[80%] sm:w-50">
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle>{plant.name} - {plant.tamil_name}</DialogTitle>
           <DialogDescription>
-            <img className="aspect-[1]" alt={altText} src={src} />
+            {plant.imageNoZoom}
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

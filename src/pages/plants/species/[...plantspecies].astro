@@ -1,8 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { SOUTH_INDIA_TREES } from "@/lib/constants";
+import { DRAVIDIAN_TREES } from "@/lib/constants";
 export function getStaticPaths() {
-  return SOUTH_INDIA_TREES.map((tree) => {
+  return DRAVIDIAN_TREES.map((tree) => {
     return ({params: {plantspecies: tree.id}})
   })
 }

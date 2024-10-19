@@ -17,5 +17,6 @@ export interface PlantSpecies extends PlantCategories {
   negative?: string,
   keywords: string[],
   href: string,
-  id: string
+  id: string,
+  imageNoZoom: JSX.Element
 }
