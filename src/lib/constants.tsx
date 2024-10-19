@@ -6,34 +6,39 @@ export const PLANT_CATEGORIES: PlantCategories[] = [
     image: <img alt="evergreen trees" src="/images/tdef-evergreen.png" className="img-zoom" />,
     description: `Fast growing medium sized evergreen tree. A drough tolerant tree 
     with beautiful foliage`,
-    key: 'evergreen'
+    key: 'பசுமை மாறா',
+    id: 'பசுமை மாறா'
   },
   {
     name: 'Deciduous Trees - இலையுதிரும் மரங்கள்',
     image: <img alt="deciduous trees" src="/images/aacha-full.jpg" className="img-zoom" />,
     description: `Deciduous trees and shrubs seasonally shed leaves, petals, after flowering & ripe fruit.`,
-    key: 'deciduous'
+    key: 'இலையுதிர்',
+    id: 'இலையுதிர்'
   },
   {
     name: 'Timber trees - வெட்டு மரங்கள்',
     image: <img alt="timber" src="/images/karungali.jpg" className="img-zoom" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
-    key: 'timber'
+    key: 'வெட்டு',
+    id: 'வெட்டு'
   },
   {
     name: 'Fruit Trees - பழ மரங்கள்',
     image: <img alt="shrubs" src="/images/kanupala-fruit.webp" className="img-zoom" />,
     description: `TDEF fruit trees play a major role in biodiversity conservation
     as most fruits are consumed by Birds / Bats / Mammals`,
-    key: 'fruit'
+    key: 'பழ',
+    id: 'பழ'
   },
   {
     name: 'Flowering Trees - பூ மரங்கள்',
     image: <img alt="flower-trees" src="/images/kaasan-flower.jpg" className="img-zoom" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
-    key: 'flower'
+    key: 'பூ',
+    id: 'பூ'
   },
 ]
 
@@ -45,7 +50,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="sarakkonrai" src="/images/sarakkonrai.jpg" className="img-zoom hover:scale-150 transition-all duration-1000 ease-out aspect-[1]" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
-    keywords: ['deciduous', 'medium', 'flower'],
+    keywords: ['இலையுதிர்', 'நடுத்தர', 'பூ'],
     href: '/sarakkonrai'
   },
   {
@@ -55,7 +60,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="naval" src="/images/naval.jpg" className="img-zoom hover:scale-150 transition-all duration-1000 ease-out aspect-[1]" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
-    keywords: ['fruit', 'medium'],
+    keywords: ['பழ', 'நடுத்தர'],
     href: '/naaval'
   },
   {
@@ -65,7 +70,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="semmaram" src="/images/semmaram.jpeg" className="img-zoom hover:scale-150 transition-all duration-1000 ease-out aspect-[1]" />,
     description: `A tall deciduous tree growing over 10 meters in height, with rough bark and no thorns. Also
     a timber tree with a beautiful form`,
-    keywords: ['timber', 'deciduous'],
+    keywords: ['வெட்டு', 'இலையுதிர்'],
     href: '/semmaram'
   },
   // {
@@ -83,7 +88,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="kuthiraipidungan" src="/images/kuthirapidukkan.jpg" className="img-zoom" />,
     description: `A tall deciduous tree growing over 10 meters in height, with smooth bark and no thorns.`,
     negative: 'Flowers emit a very unpleasant odour',
-    keywords: ['deciduous', 'tall'],
+    keywords: ['இலையுதிர்', 'உயரம்'],
     href: '/kuthiraipidungan'
   },
   // {
@@ -101,7 +106,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="shrubs" src="/images/nuraipungan-full.jpg" className="img-zoom" />,
     description: `A medium sized deciduous tree growing upto a height of 10 meters. 
     Dried fruits are natural washing agents and hence used as shampoo / washing powder`,
-    keywords: ['deciduous', 'medium'],
+    keywords: ['இலையுதிர்', 'நடுத்தர'],
     href: '/nuraipungan'
   },
   {
@@ -111,7 +116,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="pachainazhuvai" src="/images/pachainazhuvai-fruit.jpg" className="img-zoom" />,
     description: `Fast growing medium sized evergreen tree. A drough tolerant tree 
     with beautiful foliage`,
-    keywords: ['evergreen', 'medium', 'fast'],
+    keywords: ['பசுமை மாறா', 'நடுத்தர', 'வேகமாக'],
     href: '/pachainazhuvai'
   },
   {
@@ -121,7 +126,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="shrubs" src="/images/vennaghu.jpg" className="img-zoom" />,
     description: `Fast growing medium sized evergreen tree. A drough tolerant tree 
     with beautiful foliage`,
-    keywords: ['medium', 'fast'],
+    keywords: ['நடுத்தர', 'வேகமாக'],
     href: '/vennaghu'
   },
   {
@@ -131,7 +136,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="shrubs" src="/images/kakkaipazhai-full.jpg" className="img-zoom" />,
     description: `An evergreen shrub. A drough tolerant shrub 
     with beautiful foliage. Flower during Feb - May`,
-    keywords: ['evergreen', 'shrub', 'fast'],
+    keywords: ['பசுமை மாறா', 'புதர்', 'வேகமாக'],
     href: '/kakkaipazhai'
   },
   {
@@ -141,7 +146,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="shrubs" src="/images/irumpuli.jpg" className="img-zoom" />,
     description: `Known as Black Ebony. A small evergreen tree growing upto a height of
     6 meters. Wood is valuable.`,
-    keywords: ['small', 'evergreen', 'slow', 'drought', 'endangered'],
+    keywords: ['குட்டி', 'பசுமை மாறா', 'மெதுவாக', 'வறட்சி', 'endangered'],
     href: '/irumpuli'
   },
   {
@@ -151,7 +156,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="shrubs" src="/images/neerkadambai.png" className="img-zoom" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
-    keywords: ['evergreen', 'slow', 'drought', 'timber', 'medium'],
+    keywords: ['பசுமை மாறா', 'மெதுவாக', 'வறட்சி', 'வெட்டு', 'நடுத்தர'],
     href: '/neerkadambai'
   },
   {
@@ -160,7 +165,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     tamil_name: 'ஆச்சா',
     image: <img alt="shrubs" src="/images/aacha-full.jpg" className="img-zoom" />,
     description: `A medium size deciduous tree.`,
-    keywords: ['medium', 'deciduous', 'fast', 'drought', 'fodder', 'timber'],
+    keywords: ['நடுத்தர', 'இலையுதிர்', 'வேகமாக', 'வறட்சி', 'fodder', 'வெட்டு'],
     href: '/aacha'
   },
   {
@@ -170,7 +175,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="tharani" src="/images/tharani-full.jpg" className="img-zoom" />,
     description: `An evergreen medium size shrub. Also drought tolerant, 
     has beautiful foliage and fast growing.`,
-    keywords: ['shrub', 'drought', 'evergreen', 'fast'],
+    keywords: ['புதர்', 'வறட்சி', 'பசுமை மாறா', 'வேகமாக'],
     href: '/tharani'
   },
   {
@@ -180,7 +185,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="vaalsaram" src="/images/vaalsaram-full.jpeg" className="img-zoom" />,
     description: `A medium sized evergreen tree. A drough tolerant tree, has beautiful foliage
     and fast growing.`,
-    keywords: ['evergreen', 'medium', 'drought', 'fast'],
+    keywords: ['பசுமை மாறா', 'நடுத்தர', 'வறட்சி', 'வேகமாக'],
     href: '/vaalsaram'
   },
   {
@@ -189,17 +194,17 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     tamil_name: 'காசான்',
     image: <img alt="kaasaan" src="/images/kaasaan.png" className="img-zoom" />,
     description: `A small evergreen garden tree with beautiful flowers.`,
-    keywords: ['small', 'evergreen', 'garden'],
+    keywords: ['குட்டி', 'பசுமை மாறா', 'அலங்கார'],
     href: '/kaasaan'
   },
   {
-    id: 'kanupala',
+    id: 'kanupala', 
     name: 'Manilkara hexandra',
     tamil_name: 'கணுப்பலா',
     image: <img alt="shrubs" src="/images/kanupala-full.png" className="img-zoom" />,
     description: `A medium sized evergreen tree. Tree is drough tolerant, has evergreen foliage
     and is slow growing. Sloth Bears enjoy the edible fruits of these trees.`,
-    keywords: ['evergreen', 'medium', 'drought', 'slow', 'fruit'],
+    keywords: ['பசுமை மாறா', 'நடுத்தர', 'வறட்சி', 'மெதுவாக', 'பழ'],
     href: '/kanupala'
   },
   {
@@ -208,7 +213,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     tamil_name: 'ஆவாரை',
     image: <img alt="aavarai" src="/images/aavarai-full.jpeg" className="img-zoom" />,
     description: `A drought tolerant shrub that also attracts butterflies`,
-    keywords: ['shrub', 'attract','flower'],
+    keywords: ['புதர்', 'பறவைகள் விரும்பும்','பூ'],
     href: '/aavarai'
   },
   {
@@ -218,7 +223,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="veerai" src="/images/veerai-fruits.jpeg" className="img-zoom" />,
     description: `A medium sized evergreen tree. Tree is drough tolerant, has evergreen foliage
     and is slow growing.`,
-    keywords: ['medium', 'evergreen', 'drought', 'slow'],
+    keywords: ['நடுத்தர', 'பசுமை மாறா', 'வறட்சி', 'மெதுவாக'],
     href: '/veerai'
   },
   {
@@ -228,7 +233,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="konjhi" src="/images/konjhi-fruits.jpg" className="img-zoom" />,
     description: `An evergreen shrub. Also drought tolerant, 
     has beautiful foliage and fast growing.`,
-    keywords: ['shrub', 'drought', 'evergreen', 'fast'],
+    keywords: ['புதர்', 'வறட்சி', 'பசுமை மாறா', 'வேகமாக'],
     href: '/konjhi'
   },
   {
@@ -238,7 +243,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="vaagai" src="/images/vaagai-full.jpg" className="img-zoom" />,
     description: `A large deciduous tree with beautiful flowers. Also a fast growing tree
     suitable for creating an early canopy`,
-    keywords: ['deciduous', 'fast'],
+    keywords: ['இலையுதிர்', 'வேகமாக'],
     href: '/vaagai'
   },
   {
@@ -248,7 +253,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="neermaruthu" src="/images/neermaruthu-full.jpeg" className="img-zoom" />,
     description: `A large, spreading deciduous tree with beautiful bark. Drought tolerant tree
     generally found along river banks.`,
-    keywords: ['deciduous', 'slow', 'drought'],
+    keywords: ['இலையுதிர்', 'மெதுவாக', 'வறட்சி'],
     href: '/neermaruthu'
   },
   {
@@ -258,7 +263,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="eeti" src="/images/eeti-full.jpg" className="img-zoom" />,
     description: `A tall deciduous tree generally found on hillocks. Wood is used for
     furniture making. ALbeit a slow growing, drought tolerant tree.`,
-    keywords: ['timber', 'tall', 'deciduous', 'slow', 'drought'],
+    keywords: ['வெட்டு', 'உயரம்', 'இலையுதிர்', 'மெதுவாக', 'வறட்சி'],
     href: '/eeti'
   },
   {
@@ -268,7 +273,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="karumaruthu" src="/images/karumaruthu-full.jpg" className="img-zoom" />,
     description: `A large deciduous tree. Bark is blackish-grey, fissured like a 
     crocodile back. Fruit is a winged capsule, reddish when mature.`,
-    keywords: ['timber'],
+    keywords: ['வெட்டு'],
     href: '/karumaruthu'
   },
   {
@@ -277,7 +282,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     tamil_name: 'பிண்னை',
     image: <img alt="pinnai" src="/images/pinnai-full.jpg" className="img-zoom" />,
     description: `A large evergreen tree with decorative leaves, fragrant flowers and spreading crown`,
-    keywords: ['timber', 'garden', 'attract', 'evergreen'],
+    keywords: ['timber', 'அலங்கார', 'பறவைகள் விரும்பும்', 'பசுமை மாறா'],
     href: '/pinnai'
   },
   {
@@ -286,7 +291,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     tamil_name: 'காட்டு எலுமிச்சை',
     image: <img alt="kaatuezhumichai" src="/images/kaatuezhumichai.jpeg" className="img-zoom" />,
     description: `A medium sized evergreen tree with fruits being used for pickles`,
-    keywords: ['medium', 'evergreen', 'drought', 'slow'],
+    keywords: ['நடுத்தர', 'பசுமை மாறா', 'வறட்சி', 'மெதுவாக'],
     href: '/kaatuezhumichai'
   },
   {
@@ -296,7 +301,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="kaatuiluppai" src="/images/kaatuiluppai-full.jpg" className="img-zoom" />,
     description: `A large spreading evergreen tree with edible fruits and flowers. This tree
     is a beautiful, slow-growing tree.`,
-    keywords: ['tall', 'evergreen', 'slow'],
+    keywords: ['உயரம்', 'பசுமை மாறா', 'மெதுவாக'],
     href: '/kaatuiluppai'
   },
   {
@@ -306,7 +311,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="maghilam" src="/images/maghilam-full.jpg" className="img-zoom" />,
     description: `A medium sized tree with evergreen foliage with fragrant flowers. 
     Its timber is valuable, the fruit is edible & also drought resistant. `,
-    keywords: ['medium', 'evergreen', 'slow', 'drought', 'garden'],
+    keywords: ['நடுத்தர', 'பசுமை மாறா', 'மெதுவாக', 'வறட்சி', 'அலங்கார'],
     href: '/maghilam'
   },
   {
@@ -316,7 +321,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="kuttipazha" src="/images/kuttipazha.jpg" className="img-zoom" />,
     description: `A medium sized tree with evergreen foliage. It is also drought resistant 
     and slow-growing`,
-    keywords: ['medium', 'evergreen', 'slow', 'drought'],
+    keywords: ['நடுத்தர', 'பசுமை மாறா', 'மெதுவாக', 'வறட்சி'],
     href: '/kuttipazha'
   },
   // {
@@ -334,7 +339,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     image: <img alt="konghilavam" src="/images/konghilavam-flower.jpg" className="img-zoom" />,
     description: `A medium sized deciduous tree with bright yellow colour flowers. The
     fibre is used for pillow / mattresses`,
-    keywords: ['medium', 'deciduous'],
+    keywords: ['நடுத்தர', 'இலையுதிர்'],
     href: '/konghilavam'
   },
   {
@@ -343,7 +348,7 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     tamil_name: 'கருங்காலி',
     image: <img alt="karungali" src="/images/karungali.jpg" className="img-zoom" />,
     description: `A medium sized evergreen tree. Produces valuable timber.`,
-    keywords: ['medium', 'evergreen', 'timber', 'slow'],
+    keywords: ['நடுத்தர', 'பசுமை மாறா', 'timber', 'மெதுவாக'],
     href: '/karungali'
   },
 ]

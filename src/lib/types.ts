@@ -2,6 +2,7 @@ export interface PlantCategories {
   name: String,
   description: String,
   image: JSX.Element,
+  id: String,
   // imageSrc: {
   //   src: JSX.Element,
   //   width: number,
