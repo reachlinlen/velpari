@@ -2,30 +2,30 @@ import type { PlantCategories, PlantSpecies } from './types';
 
 export const PLANT_CATEGORIES: PlantCategories[] = [
   {
-    name: 'Deciduous Trees - இலையுதிரும் மரங்கள்',
-    image: <img alt="fruit trees" src="/images/olirum.png" className="img-zoom" />,
-    description: `Deciduous trees and shrubs seasonally shed leaves, petals, after flowering & ripe fruit.`,
-    key: 'deciduous'
-  },
-  {
-    name: 'Timber trees - ',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
-    description: `TDEF also has some species of Shrubs which can tolerate 
-    high tempatures and at the same time drought`,
-    key: 'timber'
-  },
-  {
     name: 'Evergreen Trees - பசுமை மாறா மரங்கள்',
-    image: <img alt="shrubs" src="/images/olirum.png" className="img-zoom" />,
+    image: <img alt="evergreen trees" src="/images/tdef-evergreen.png" className="img-zoom" />,
     description: `Fast growing medium sized evergreen tree. A drough tolerant tree 
     with beautiful foliage`,
     key: 'evergreen'
   },
   {
-    name: 'Fruit Trees - பழ மரங்கள்',
-    image: <img alt="fruit trees" src="/images/olirum.png" className="img-zoom" />,
+    name: 'Deciduous Trees - இலையுதிரும் மரங்கள்',
+    image: <img alt="deciduous trees" src="/images/aacha-full.jpg" className="img-zoom" />,
+    description: `Deciduous trees and shrubs seasonally shed leaves, petals, after flowering & ripe fruit.`,
+    key: 'deciduous'
+  },
+  {
+    name: 'Timber trees - வெட்டு மரங்கள்',
+    image: <img alt="timber" src="/images/karungali.jpg" className="img-zoom" />,
     description: `TDEF also has some species of Shrubs which can tolerate 
     high tempatures and at the same time drought`,
+    key: 'timber'
+  },
+  {
+    name: 'Fruit Trees - பழ மரங்கள்',
+    image: <img alt="shrubs" src="/images/kanupala-fruit.webp" className="img-zoom" />,
+    description: `TDEF fruit trees play a major role in biodiversity conservation
+    as most fruits are consumed by Birds / Bats / Mammals`,
     key: 'fruit'
   },
   {
@@ -336,5 +336,14 @@ export const SOUTH_INDIA_TREES: PlantSpecies[] = [
     fibre is used for pillow / mattresses`,
     keywords: ['medium', 'deciduous'],
     href: '/konghilavam'
+  },
+  {
+    id: 'karungali',
+    name: 'Diospyros ebenum',
+    tamil_name: 'கருங்காலி',
+    image: <img alt="karungali" src="/images/karungali.jpg" className="img-zoom" />,
+    description: `A medium sized evergreen tree. Produces valuable timber.`,
+    keywords: ['medium', 'evergreen', 'timber', 'slow'],
+    href: '/karungali'
   },
 ]
