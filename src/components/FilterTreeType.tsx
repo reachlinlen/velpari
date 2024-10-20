@@ -1,21 +1,19 @@
-import { Button } from "@/components/ui/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import { PLANT_CATEGORIES } from "@/lib/constants"
-import type { PlantCategories } from "@/lib/types"
-import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline"
- 
-export function FilterTreeType({
-  categoryList, 
-  handleCategoryChange
-}: {
-  categoryList: String[]
-  handleCategoryChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}) {
+} from "@/components/ui/popover";
+import { PLANT_CATEGORIES } from "@/lib/constants";
+import type { PlantCategories } from "@/lib/types";
+import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
 
+export function FilterTreeType({
+  categoryList,
+  handleCategoryChange,
+}: {
+  categoryList: String[];
+  handleCategoryChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) {
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -31,7 +29,11 @@ export function FilterTreeType({
                 type="checkbox"
                 className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                 onChange={handleCategoryChange}
-                checked={categoryList.find((category) => category == plant.id) ? true : false}
+                checked={
+                  categoryList.find((category) => category == plant.id)
+                    ? true
+                    : false
+                }
               />
               <label
                 htmlFor={`${plant.id}`}
@@ -44,5 +46,5 @@ export function FilterTreeType({
         </form>
       </PopoverContent>
     </Popover>
-  )
+  );
 }

@@ -76,7 +76,7 @@ function ShowItem({
   product: PlantSpeciesCount;
   currentCart: Cart;
 }) {
-  const handleDeleteProduct = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleDeleteProduct = () => {
     delete currentCart[product.id];
     cart.set({ ...currentCart });
   };

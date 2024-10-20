@@ -6,8 +6,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "./ui/button";
-import React from "react";
 import type { PlantSpecies } from "@/lib/types";
 
 export function ImageModal({ plant }: { plant: PlantSpecies }) {
