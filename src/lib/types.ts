@@ -22,9 +22,9 @@ export interface PlantSpecies extends PlantCategories {
 }
 
 export interface PlantSpeciesCount extends PlantSpecies {
-  count: number;
+  count: number | string;
 }
 
 export interface Cart {
-  [plantID: string]: number;
+  [plantID: string]: number | string;
 }

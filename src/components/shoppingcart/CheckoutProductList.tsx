@@ -58,17 +58,21 @@ const CheckoutProductList = () => {
           </ul>
         </section>
       </form>
-      <Button
-        variant="link"
-        className="text-emerald-950 bg-whatsapp hover:text-emerald-950 font-bold mt-24 mb-2"
-        onClick={handleCopyToClipBoard}
-      >
-        Copy Shopping Cart to WhatsApp
-      </Button>
-      <p className="text-xs text-gray-500">
-        <sup>*</sup>
-        <i>After clicking, please paste in WhatsApp chat</i>
-      </p>
+      {displayCart.length > 0 && (
+        <>
+          <Button
+            variant="link"
+            className="text-emerald-950 bg-whatsapp hover:text-emerald-950 font-bold mt-24 mb-2"
+            onClick={handleCopyToClipBoard}
+          >
+            Copy Shopping Cart to WhatsApp
+          </Button>
+          <p className="text-xs text-gray-500">
+            <sup>*</sup>
+            <i>After clicking, please paste in WhatsApp chat</i>
+          </p>
+        </>
+      )}
     </div>
   );
 };
@@ -81,7 +85,8 @@ function ShowItem({
   currentCart: Cart;
 }) {
   const handleAddCart = (e: React.ChangeEvent<HTMLInputElement>) => {
-    currentCart[product.id] = Number(e.target.value);
+    currentCart[product.id] =
+      e.target.value == "" ? "" : Number(e.target.value);
     cart.set({
       ...currentCart,
     });
@@ -147,6 +152,18 @@ function ShowItem({
             value={product.count}
             className="w-20"
             onChange={handleAddCart}
+            onBlur={() => {
+              const currentCart = cart.get();
+              if (
+                currentCart[product.id] == 0 ||
+                currentCart[product.id] == ""
+              ) {
+                delete currentCart[product.id];
+              }
+              cart.set({
+                ...currentCart,
+              });
+            }}
           />
           <button
             type="button"
