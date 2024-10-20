@@ -61,10 +61,35 @@ export const PLANT_CATEGORIES: PlantCategories[] = [
         className="img-zoom"
       />
     ),
-    description: `TDEF also has some species of Shrubs which can tolerate 
-    high tempatures and at the same time drought`,
+    description: `TDEF flowering trees attract not only bees / birds but also human beings.`,
     key: "பூ",
     id: "பூ",
+  },
+  {
+    name: "Medium Sized Trees - நடுத்தர மரங்கள்",
+    image: (
+      <img
+        alt="medium-trees"
+        src="/images/kuttipazha.jpg"
+        className="img-zoom"
+      />
+    ),
+    description: `Medium sized trees grow only upto a height of 10 - 15 meter.`,
+    key: "நடுத்தர",
+    id: "நடுத்தர",
+  },
+  {
+    name: "Tall Trees - உயரமான மரங்கள்",
+    image: (
+      <img
+        alt="tall-trees"
+        src="/images/kuthirapidukkan.jpg"
+        className="img-zoom"
+      />
+    ),
+    description: `Tall trees grow more than 15 meters in height. Most of them yield valuable timber also.`,
+    key: "உயரமான",
+    id: "உயரமான",
   },
 ];
 
@@ -143,7 +168,7 @@ export const DRAVIDIAN_TREES: PlantSpecies[] = [
     ),
     imageNoZoom: (
       <img
-        alt="kuthirapidukkan"
+        alt="mulkiluvai"
         src="/images/mulkiluvai-full.jpeg"
         className="aspect-[1]"
       />
