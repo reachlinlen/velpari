@@ -4,16 +4,18 @@ import '@/styles/globals.css'
 import NavBar from '../components/NavBar'
 import { Image } from 'astro:assets';
 import olirum from '../assets/olirum.png';
+import ibf from '../assets/IBF.jpg';
 import { Button } from '@/components/ui/button';
 ---
 
 <Layout title="Welcome to Astro.">
 	<NavBar pathname={Astro.url.pathname} />
-	<header class="mx-auto text-center mt-32">a OLIRUM ERODU foundation & IBF initiative</header>
+	<header class="mx-auto text-center mt-32">a <i>OLIRUM ERODU foundation</i> & <i></i>IBF</i> initiative</header>
 	<main class="max-w-[944px] mx-auto mt-8">
 		<div class="grid justify-center">
-			<div class="flex gap-x-8 sm:flex-col sm:gap-y-8">
+			<div class="flex gap-x-8 flex-col">
 				<Image alt="olirum foundation logo" src={olirum} />
+				<Image alt="ibf logo" src={ibf} class="w-52 h-52" />
 			</div>
 			<a href="/plants" class="mt-8">
 				<Button variant="link" className='text-emerald-950 hover:text-emerald-950 font-bold bg-lime-400'>Let's Explore our Native Trees</Button>
