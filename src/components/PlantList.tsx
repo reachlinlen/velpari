@@ -1,46 +1,83 @@
-import { DRAVIDIAN_TREES } from '@/lib/constants'
-import type { PlantSpecies } from '@/lib/types'
-import * as React from 'react'
-import { FilterTreeType } from './FilterTreeType'
-import { Button } from './ui/button'
-import { ImageModal } from './ImageModal'
+import { DRAVIDIAN_TREES } from "@/lib/constants";
+import type { Cart, PlantSpecies } from "@/lib/types";
+import * as React from "react";
+import { FilterTreeType } from "./FilterTreeType";
+import { Button } from "./ui/button";
+import { ImageModal } from "./ImageModal";
+import { cart } from "./store/store";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Input } from "./ui/input";
 
 const PlantList = () => {
-  const [categoryList, setCategoryList] = React.useState<string[]>([])
-  const selectedPlants: PlantSpecies[] = []
+  const [categoryList, setCategoryList] = React.useState<string[]>([]);
+  const selectedPlants: PlantSpecies[] = [];
 
   DRAVIDIAN_TREES.map((tree) => {
     if (categoryList.length > 0) {
-      const filteredData = categoryList.filter((category) => tree.keywords.indexOf(category) != -1)
+      const filteredData = categoryList.filter(
+        (category) => tree.keywords.indexOf(category) != -1
+      );
       if (filteredData.length > 0) {
-        selectedPlants.push(tree)
-        return
+        selectedPlants.push(tree);
+        return;
       }
     } else {
-      selectedPlants.push(tree)
-      return
+      selectedPlants.push(tree);
+      return;
     }
-  })
+  });
 
   const handleCategoryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.checked) {
-      categoryList.push(e.target.id)
+      categoryList.push(e.target.id);
     } else {
-      const index = categoryList.indexOf(e.target.id)
-      categoryList.splice(index, 1)
+      const index = categoryList.indexOf(e.target.id);
+      categoryList.splice(index, 1);
     }
-    setCategoryList([...categoryList])
-  }
+    setCategoryList([...categoryList]);
+  };
+
+  const handleAddCart =
+    (plant: PlantSpecies) => (e: React.ChangeEvent<HTMLInputElement>) => {
+      const currentCart: Cart = cart.get();
+      console.log({ currentCart });
+      currentCart[plant.id] = Number(e.target.value);
+      cart.set({
+        ...currentCart,
+      });
+      console.log(cart.get());
+    };
 
   return (
     <>
       <div>
-        <div className='flex justify-end mr-4'>
-          <FilterTreeType categoryList={categoryList} handleCategoryChange={handleCategoryChange} />
+        <div className="flex justify-end mr-4">
+          <FilterTreeType
+            categoryList={categoryList}
+            handleCategoryChange={handleCategoryChange}
+          />
         </div>
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 mt-8">
           {selectedPlants.map((plant: PlantSpecies) => (
-            <ImageModal plant={plant} />
+            <div key={plant.id}>
+              <ImageModal plant={plant} />
+              <div className="flex justify-center">
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button variant="ghost" className="">
+                      Add to cart
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-80">
+                    <Input
+                      type="number"
+                      onChange={handleAddCart(plant)}
+                      placeholder="Enter count of plants"
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+            </div>
             // <div key={plant.id} className="group">
             //   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
             //     {plant.image}
@@ -62,7 +99,7 @@ const PlantList = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default PlantList
+export default PlantList;

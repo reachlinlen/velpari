@@ -1,7 +1,11 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
-export default function NavBar({pathname}: {pathname: string}) {
+export default function NavBar({ pathname }: { pathname: string }) {
   return (
     <Disclosure as="nav" className="bg-white shadow">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -25,18 +29,18 @@ export default function NavBar({pathname}: {pathname: string}) {
             </div>
             <div className="flex gap-x-8 sm:ml-6 sm:flex sm:space-x-8">
               {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                <a
-                  href="/"
-                  className={`inline-flex items-center border-b-2 ${pathname == "/" ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-900`}
-                >
-                  TDEF
-                </a>
-                <a
-                  href="/plants"
-                  className={`inline-flex items-center border-b-2 ${pathname == "/plants" ? 'border-indigo-500' : 'border-transparent'} px-1 pt-1 text-sm font-medium text-gray-900`}
-                >
-                  Plants
-                </a>
+              <a
+                href="/"
+                className={`inline-flex items-center border-b-2 ${pathname == "/" ? "border-indigo-500" : "border-transparent"} px-1 pt-1 text-sm font-medium text-gray-900`}
+              >
+                TDEF
+              </a>
+              <a
+                href="/plants"
+                className={`inline-flex items-center border-b-2 ${pathname == "/plants" ? "border-indigo-500" : "border-transparent"} px-1 pt-1 text-sm font-medium text-gray-900`}
+              >
+                Plants
+              </a>
               {/* <a
                 href="#"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
@@ -46,14 +50,16 @@ export default function NavBar({pathname}: {pathname: string}) {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button
-              type="button"
-              className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              <span className="absolute -inset-1.5" />
-              <span className="sr-only">View notifications</span>
-              <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
-            </button>
+            <a href="/checkout">
+              <button
+                type="button"
+                className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                <span className="absolute -inset-1.5" />
+                <span className="sr-only">View notifications</span>
+                <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
+              </button>
+            </a>
 
             {/* Profile dropdown */}
             {/* <Menu as="div" className="relative ml-3">
@@ -127,5 +133,5 @@ export default function NavBar({pathname}: {pathname: string}) {
         </div>
       </DisclosurePanel>
     </Disclosure>
-  )
+  );
 }

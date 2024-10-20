@@ -1,0 +1,11 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import {CheckoutProductList} from '../components/shoppingcart/CheckoutProductList'
+import NavBar from "@/components/NavBar";
+import '@/styles/globals.css'
+---
+
+<Layout title="check out">
+	<NavBar pathname={Astro.url.pathname} />
+  <CheckoutProductList client:only="react" />
+</Layout>

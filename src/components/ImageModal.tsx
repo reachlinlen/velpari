@@ -10,11 +10,7 @@ import { Button } from "./ui/button";
 import React from "react";
 import type { PlantSpecies } from "@/lib/types";
 
-export function ImageModal({
-  plant,
-}: {
-  plant: PlantSpecies;
-}) {
+export function ImageModal({ plant }: { plant: PlantSpecies }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -28,20 +24,21 @@ export function ImageModal({
             /> */}
           </div>
           <div className="mt-4 flex items-start justify-between text-base font-medium text-gray-900 h-10">
-            <h3>{plant.name} - {plant.tamil_name}</h3>
+            <h3>
+              {plant.name} - {plant.tamil_name}
+            </h3>
           </div>
-          <p className="mt-1 text-sm italic text-gray-500 md:h-20 md:max-h-20 overflow-y-scroll">{plant.description}</p>
-          <div className='flex justify-center'>
-            <Button variant="ghost" className=''>Add to cart</Button>
-          </div>
+          <p className="mt-1 text-sm italic text-gray-500 md:h-20 md:max-h-20 overflow-y-scroll">
+            {plant.description}
+          </p>
         </div>
       </DialogTrigger>
       <DialogContent className="bg-white max-w-[720px] w-vw[80%] sm:w-50">
         <DialogHeader>
-          <DialogTitle>{plant.name} - {plant.tamil_name}</DialogTitle>
-          <DialogDescription>
-            {plant.imageNoZoom}
-          </DialogDescription>
+          <DialogTitle>
+            {plant.name} - {plant.tamil_name}
+          </DialogTitle>
+          <DialogDescription>{plant.imageNoZoom}</DialogDescription>
         </DialogHeader>
       </DialogContent>
     </Dialog>
