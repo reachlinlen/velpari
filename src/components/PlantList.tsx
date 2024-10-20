@@ -40,12 +40,10 @@ const PlantList = () => {
   const handleAddCart =
     (plant: PlantSpecies) => (e: React.ChangeEvent<HTMLInputElement>) => {
       const currentCart: Cart = cart.get();
-      console.log({ currentCart });
       currentCart[plant.id] = Number(e.target.value);
       cart.set({
         ...currentCart,
       });
-      console.log(cart.get());
     };
 
   return (

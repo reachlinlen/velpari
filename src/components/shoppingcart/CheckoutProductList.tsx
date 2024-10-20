@@ -14,7 +14,7 @@ const CheckoutProductList = () => {
     let finalString = "";
     displayCart.forEach(
       (product) =>
-        (finalString += `${product.name}-${product.tamil_name} - ${product.count}; `)
+        (finalString += `${product.name}-${product.tamil_name} - ${product.count};\n`)
     );
     navigator.clipboard.writeText(finalString);
   };
@@ -60,11 +60,15 @@ const CheckoutProductList = () => {
       </form>
       <Button
         variant="link"
-        className="text-emerald-950 bg-whatsapp hover:text-emerald-950 font-bold mt-24"
+        className="text-emerald-950 bg-whatsapp hover:text-emerald-950 font-bold mt-24 mb-2"
         onClick={handleCopyToClipBoard}
       >
         Copy Shopping Cart to WhatsApp
       </Button>
+      <p className="text-xs text-gray-500">
+        <sup>*</sup>
+        <i>After clicking, please paste in WhatsApp chat</i>
+      </p>
     </div>
   );
 };
@@ -76,10 +80,18 @@ function ShowItem({
   product: PlantSpeciesCount;
   currentCart: Cart;
 }) {
+  const handleAddCart = (e: React.ChangeEvent<HTMLInputElement>) => {
+    currentCart[product.id] = Number(e.target.value);
+    cart.set({
+      ...currentCart,
+    });
+  };
+
   const handleDeleteProduct = () => {
     delete currentCart[product.id];
     cart.set({ ...currentCart });
   };
+
   return (
     <li className="flex py-6">
       <div className="flex-shrink-0 w-20 h-20">
@@ -99,7 +111,7 @@ function ShowItem({
                 href={product.href}
                 className="font-medium text-gray-700 hover:text-gray-800"
               > */}
-              {product.name}-{product.tamil_name}
+              {product.name} - {product.tamil_name}
               {/* </a> */}
             </h4>
             {/* <p className="ml-4 text-sm font-medium text-gray-900">
@@ -131,7 +143,11 @@ function ShowItem({
             </span>
           </p> */}
         <div className="mt-4 flex items-center justify-between sm:left-1/2 sm:top-0 sm:mt-0 sm:flex">
-          <Input defaultValue={product.count} className="w-20" />
+          <Input
+            value={product.count}
+            className="w-20"
+            onChange={handleAddCart}
+          />
           <button
             type="button"
             className="ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:ml-0 sm:mt-3 w-fit"
