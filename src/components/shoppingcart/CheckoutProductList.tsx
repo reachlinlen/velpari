@@ -4,10 +4,20 @@ import type { Cart, PlantSpecies, PlantSpeciesCount } from "@/lib/types";
 import { DRAVIDIAN_TREES } from "@/lib/constants";
 import { Input } from "../ui/input";
 import { TrashIcon } from "@heroicons/react/24/outline";
+import { Button } from "../ui/button";
 
 const CheckoutProductList = () => {
   const currentCart: Cart = useStore(cart);
   const displayCart: PlantSpeciesCount[] = [];
+
+  const handleCopyToClipBoard = () => {
+    let finalString = "";
+    displayCart.forEach(
+      (product) =>
+        (finalString += `${product.name}-${product.tamil_name} - ${product.count}; `)
+    );
+    navigator.clipboard.writeText(finalString);
+  };
 
   Object.keys(currentCart).map((plantID) => {
     const shoppedPlant: PlantSpecies | undefined = DRAVIDIAN_TREES.find(
@@ -36,12 +46,11 @@ const CheckoutProductList = () => {
             role="list"
             className="divide-y divide-gray-200 border-b border-t border-gray-200"
           >
-            {displayCart.map((product, productIdx) => {
+            {displayCart.map((product) => {
               return (
                 <ShowItem
                   key={product.id}
                   product={product}
-                  productIdx={productIdx}
                   currentCart={currentCart}
                 />
               );
@@ -49,17 +58,22 @@ const CheckoutProductList = () => {
           </ul>
         </section>
       </form>
+      <Button
+        variant="link"
+        className="text-emerald-950 bg-whatsapp hover:text-emerald-950 font-bold mt-24"
+        onClick={handleCopyToClipBoard}
+      >
+        Copy Shopping Cart to WhatsApp
+      </Button>
     </div>
   );
 };
 
 function ShowItem({
   product,
-  productIdx,
   currentCart,
 }: {
   product: PlantSpeciesCount;
-  productIdx: number;
   currentCart: Cart;
 }) {
   const handleDeleteProduct = (e: React.MouseEvent<HTMLButtonElement>) => {
