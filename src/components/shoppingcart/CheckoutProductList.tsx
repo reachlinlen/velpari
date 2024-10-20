@@ -75,10 +75,14 @@ const CheckoutProductList = () => {
           >
             Copy Shopping Cart to WhatsApp
           </Button>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500 mb-12">
             <sup>*</sup>
             <i>After clicking, please paste in WhatsApp chat</i>
           </p>
+          <a href={`/plants/species`} className="hover:underline">
+            Please click here to move to Plant Species page to add more plants
+            to Shopping Cart
+          </a>
         </>
       )}
     </div>
