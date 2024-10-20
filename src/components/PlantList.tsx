@@ -59,6 +59,14 @@ const PlantList = () => {
           {selectedPlants.map((plant: PlantSpecies) => (
             <div key={plant.id}>
               <ImageModal plant={plant} />
+              <div className="mt-4 flex items-start justify-between text-base font-medium text-gray-900 h-10">
+                <h3>
+                  {plant.name} - {plant.tamil_name}
+                </h3>
+              </div>
+              <p className="mt-1 text-sm italic text-gray-500 md:h-20 md:max-h-20 overflow-y-scroll">
+                {plant.description}
+              </p>
               <div className="flex justify-center">
                 <Popover>
                   <PopoverTrigger asChild>

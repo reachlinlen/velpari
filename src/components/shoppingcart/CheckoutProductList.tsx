@@ -41,7 +41,6 @@ const CheckoutProductList = () => {
           <h2 id="cart-heading" className="sr-only">
             Items in your shopping cart
           </h2>
-
           <ul
             role="list"
             className="divide-y divide-gray-200 border-b border-t border-gray-200"
@@ -56,6 +55,15 @@ const CheckoutProductList = () => {
               );
             })}
           </ul>
+          {displayCart.length == 0 && (
+            <>
+              <p>Shopping Cart is Empty.</p>
+              <a href={`/plants/species`} className="hover:underline">
+                Please click here to move to Plant Species page to add plants to
+                Shopping Cart
+              </a>
+            </>
+          )}
         </section>
       </form>
       {displayCart.length > 0 && (
